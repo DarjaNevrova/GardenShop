@@ -1,0 +1,181 @@
+.container {
+    padding: 5% 10%;
+    display: flex;
+    gap: 2rem;
+    max-width: 1317px;
+    margin: 0 auto;
+}
+
+.line {
+    border-top: 1px dashed #8B8B8B;
+    width: 100%;
+}
+
+.rightContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.leftContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 425px;
+    height: 585px;
+    padding: 1rem;
+    margin-top: 4%;
+}
+
+.image {
+    max-width: 86%;
+    min-width: 40%;
+    height: auto;
+}
+
+.priceGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 91px;
+    width: 450px;
+    gap: 20%;
+    align-items: center;
+}
+
+.button {
+    width: 341px;
+    height: 86px;
+    font-size: 25px;
+    font-family: Montserrat;
+    font-weight: 700;
+    border: none;
+    background-color: #339933;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.discont_price {
+    font-size: 60px;
+    line-height: 26px;
+    font-weight: 600;
+}
+
+.boldDollar {
+    font-weight: bold;
+}
+
+.discount {
+    color: #FF32A1;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.crossedOut {
+    text-decoration: line-through;
+    color: #8B8B8B;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.percent {
+    color: #FF32A1;
+    font-size: 15px;
+}
+
+.description {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.aboutProduct {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.noWrapPrice {
+    white-space: nowrap;
+}
+
+.noWrapDiscount {
+    white-space: nowrap;
+}
+
+.priceGrid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 91px;
+    width: 450px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+@media (max-width: 375px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .rightContainer,
+    .leftContainer {
+        width: 100%;
+        align-items: center;
+        padding: 0;
+    }
+
+    .image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .priceGrid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        width: 100%;
+    }
+
+    .button {
+        width: 100px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .discont_price,
+    .discount,
+    .crossedOut {
+        font-size: smaller;
+    }
+
+    .description,
+    .aboutProduct {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        padding: 3%;
+    }
+
+    .image {
+        max-width: 160px;
+        height: auto;
+    }
+
+    .leftContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

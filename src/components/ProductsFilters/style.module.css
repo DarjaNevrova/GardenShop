@@ -1,0 +1,122 @@
+.container,
+.inputs {
+    display: flex;
+    align-items: center;
+    gap: 2%;
+}
+
+.inputs {
+    gap: 20px;
+}
+
+.input {
+    height: 42px;
+    width: 103px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.paragraph,
+.sorted,
+.discounted {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.discounted {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.sorted {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.select {
+    width: 219px;
+    height: 40px;
+    border-radius: 7px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .inputs,
+    .sorted,
+    .discounted {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .input,
+    .select {
+        width: 100%;
+    }
+
+    .paragraph,
+    .sorted p,
+    .discounted p {
+        font-size: 16px;
+    }
+}
+
+.byDefault {
+    height: 42px;
+    width: 140px;
+    border: 1px solid black;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .input,
+    .select {
+        width: 80%;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        font-size: 10px;
+    }
+
+    .inputs,
+    .discounted,
+    .sorted {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .paragraph,
+    .inputs>input,
+    .discounted>p,
+    .sorted>p {
+        margin: 0;
+    }
+
+    .checkbox {
+        width: 25px;
+        height: 25px;
+    }
+}

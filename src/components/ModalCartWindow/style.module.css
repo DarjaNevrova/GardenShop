@@ -1,0 +1,74 @@
+.container {
+    position: absolute;
+    top: 95px;
+    right: 0;
+    width: 280px;
+    height: minmax(auto, 100%);
+    z-index: 11;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.detailsContainer:not(:last-child) {
+    border-bottom: 2px solid #136b04;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: auto 150px;
+    position: relative;
+}
+
+.image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 15px;
+    position: absolute;
+    margin-top: 20px;
+
+}
+
+.detailsContainer {
+    color: #105903;
+    font-weight: 700;
+    font-size: 15px;
+
+}
+
+.viewAllContainer {
+    display: flex;
+    justify-content: center;
+
+}
+
+.viewAll {
+    color: #136b04;
+    font-weight: 600;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.count {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #136b04;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 375px) {
+    .container {
+        display: none;
+    }
+}

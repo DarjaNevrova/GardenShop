@@ -1,0 +1,13 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
+    gap: 20px;
+    padding: 110px 40px;
+    justify-content: center;
+}
+
+.paragraph {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}

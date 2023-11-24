@@ -1,0 +1,23 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(318px, 1fr));
+    gap: 20px;
+    padding-top: 25px;
+    justify-items: center;
+}
+
+.paragraph {
+    font-family: Arial;
+}
+
+@media (max-width: 375px) {
+    .paragraph {
+        display: flex;
+        justify-content: center;
+        font-size: 22px;
+    }
+
+    .mainContainer {
+        padding: 20px 0;
+    }
+}

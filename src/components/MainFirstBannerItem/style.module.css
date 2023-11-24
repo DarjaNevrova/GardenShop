@@ -1,0 +1,109 @@
+.SaleContainer {
+    max-width: 100%;
+    position: relative;
+    padding: 0 20px;
+    height: 600px;
+    background-color: #A1E2EB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.information {
+    padding-top: 1%;
+    width: 30%;
+    padding-left: 5%;
+    font-size: 80px;
+    color: white;
+    line-height: 81.9px;
+    font-weight: 700;
+    position: relative;
+    font-family: Arial;
+    z-index: 1;
+}
+
+.bush {
+    position: absolute;
+    right: 30px;
+    top: 46%;
+    transform: translateY(-50%);
+    max-width: 45%;
+}
+
+.secondText {
+    font-size: 60px;
+}
+
+.btn {
+    width: 155px;
+    height: 82px;
+    font-size: 25px;
+    color: black;
+    border: 2px solid white;
+    border-radius: 13px;
+    margin-top: 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .information {
+        font-size: 60px;
+        line-height: 61.9px;
+        width: 40%;
+    }
+
+    .bush {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .SaleContainer {
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .information {
+        font-size: 40px;
+        line-height: 41.9px;
+        width: 50%;
+    }
+
+    .bush {
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .secondText {
+        font-size: 35px;
+    }
+
+    .btn {
+        width: 120px;
+        height: 62px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .information {
+        font-size: 30px;
+        line-height: 31.9px;
+        padding-left: 20px;
+        width: 100%;
+    }
+}
+
+.bush img {
+    width: 100%;
+    height: auto;
+    padding-top: 60px;
+}
+
+@media (max-width: 768px) {
+    .bush img {
+        display: none;
+    }
+}

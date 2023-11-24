@@ -1,0 +1,9 @@
+.errorImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorImg img {
+    max-width: 100%; 
+}

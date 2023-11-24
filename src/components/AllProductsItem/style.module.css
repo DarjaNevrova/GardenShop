@@ -1,0 +1,101 @@
+.cardContainer {
+    width: 300px;
+    height: 420px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.6);
+    position: relative;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.productImg {
+    position: relative;
+    width: 300px;
+    height: 276px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.cardContainer h2 {
+    font-size: 19px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.cardContainer p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.priceContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.discountPrice {
+    font-weight: 600;
+}
+
+.discount {
+    color: #FF32A1;
+}
+
+.crossedOut {
+    text-decoration: line-through;
+}
+
+.button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, box-shadow 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 279px;
+    height: 72px;
+    border-radius: 21px;
+    background-color: #F1FFF1;
+    border: 2px solid #339933;
+    color: #339933;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-align: center;
+    z-index: 10;
+}
+
+.price {
+    padding-left: 125%;
+}
+
+.cardContainer:hover .button {
+    opacity: 1;
+}
+
+@media (max-width: 375px) {
+    .cardContainer {
+        width: 255px;
+        height: 370px;
+    }
+
+    .productImg {
+        position: relative;
+        width: 255px;
+        height: 260px;
+    }
+
+    .button {
+        opacity: 1;
+        width: 150px;
+        height: 50px;
+    }
+}

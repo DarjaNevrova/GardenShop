@@ -1,0 +1,133 @@
+.container {
+    width: 492px;
+    height: 389px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 21px;
+    border: 2px solid black;
+}
+
+.totalLine {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30%;
+    align-items: center;
+}
+
+.order {
+    margin-bottom: 16px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.totalLine p {
+    font-size: 24px;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.container button {
+    width: 446px;
+    height: 76px;
+    border-radius: 17px;
+    font-weight: 700;
+    padding: 15px 32px;
+    background-color: #339933;
+    border: none;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.input {
+    width: 366px;
+    height: 73px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    padding-left: 18%;
+}
+
+@media (max-width: 480px) {
+    .container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        height: auto;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        padding: 0 20px 20px;
+        background-color: white;
+        margin-top: -20px;
+    }
+
+    .order {
+        font-size: 19px;
+        margin-bottom: 10px;
+    }
+
+    .totalLine {
+        justify-content: space-between;
+    }
+
+    .totalLine p {
+        font-size: 19px;
+    }
+
+    .input {
+        width: 200px;
+        box-sizing: border-box;
+        height: 28px;
+        margin-bottom: 10px;
+        padding: 0 10px;
+        border-radius: 10px;
+    }
+
+    .container button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 28px;
+        font-size: 15px;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+
+    .container form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        height: auto;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        padding: 0 20px 20px;
+        background-color: white;
+        margin-top: -20px;
+    }
+}

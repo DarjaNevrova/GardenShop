@@ -1,0 +1,93 @@
+.footerContainer {
+    width: 81%;
+    height: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 250px auto;
+    grid-gap: 10px;
+}
+
+.contactAddressWrapper,
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactAddressWrapper .socialIcons {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.map {
+    grid-area: 2 / 1 / 3 / 3;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.contact,
+.adress {
+    font-size: 30px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+
+.number {
+    font-size: 30px;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.schoolAdresses {
+    font-size: 30px;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.hours,
+.hours24 {
+    font-size: 18px;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.instagramIcon,
+.whatsappIcon {
+    font-size: 30px;
+    color: black;
+}
+
+
+@media (max-width: 450px) {
+    .information {
+        display: none;
+    }
+}
+
+@media (max-width: 1170px) {
+    .information p {
+        font-size: 20px;
+    }
+
+    .contactAddressWrapper p {
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 860px) {
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 440px) {
+
+    .footerContainer {
+        height: auto;
+    }
+}
