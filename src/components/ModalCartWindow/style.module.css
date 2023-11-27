@@ -27,26 +27,23 @@
 }
 
 .image {
-    width: 70px;
-    height: 70px;
+    width: 95px;
+    height: 95px;
     object-fit: cover;
     border-radius: 15px;
     position: absolute;
     margin-top: 20px;
-
 }
 
 .detailsContainer {
     color: #105903;
     font-weight: 700;
     font-size: 15px;
-
 }
 
 .viewAllContainer {
     display: flex;
     justify-content: center;
-
 }
 
 .viewAll {
@@ -57,14 +54,24 @@
     text-decoration: none;
 }
 
-.count {
-    height: 20px;
-    width: 20px;
-    border: 2px solid #136b04;
-    border-radius: 6px;
+.calculate {
+    width: 70px;
+    height: 25px;
+    font-size: 20px;
+    font-weight: 600;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.calculate button {
+    border: 0;
+    background-color: white;
+    font-size: 20px;
+}
+
+.count{
+    font-size: 15px;
 }
 
 @media (max-width: 375px) {

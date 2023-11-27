@@ -47,7 +47,6 @@ export default function ProductsFilters({ showDiscountCheckbox }) {
     return (
         <Container>
             <div className={style.container}>
-
                 <div className={style.inputs}>
                     <p className={style.paragraph}>Price</p>
                     <input
@@ -65,7 +64,6 @@ export default function ProductsFilters({ showDiscountCheckbox }) {
                         value={price.max === Infinity ? '' : price.max}
                         onChange={changePrice}
                     />
-
                 </div>
                 {showDiscountCheckbox ? (
                     <div className={style.discounted}>
@@ -77,7 +75,6 @@ export default function ProductsFilters({ showDiscountCheckbox }) {
                             onChange={handleDiscountChange} />
                     </div>
                 ) : null}
-
                 <div className={style.sorted}>
                     <p>Sorted</p>
                     <select value="" onChange={orderHandler} className={style.byDefault}>

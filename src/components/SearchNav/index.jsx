@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { search } from '../../store/slice/productSlice';
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -11,6 +11,7 @@ export default function SearchNav() {
     const navigate = useNavigate();
     const [titlesearch, setTitleSearch] = useState('');
     const [isSearchVisible, setIsSearchVisible] = useState(false);
+    const searchDiv = useRef(null);
 
     const toggleSearchInput = () => {
         setIsSearchVisible(!isSearchVisible);
@@ -24,16 +25,28 @@ export default function SearchNav() {
         }
     };
 
+    const handleOutsideClick = (e) => {
+        if (searchDiv.current && !searchDiv.current.contains(e.target)) {
+            setIsSearchVisible(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('click', handleOutsideClick);
+        return () => {
+            document.removeEventListener('click', handleOutsideClick);
+        };
+    }, [dispatch]);
+
     return (
-        <div className={style.search} onClick={toggleSearchInput}>
-            <AiOutlineSearch />
+        <div ref={searchDiv} className={style.search} onClick={(e) => e.stopPropagation()}>
+            <AiOutlineSearch onClick={toggleSearchInput} />
             {isSearchVisible && (
                 <input
                     value={titlesearch}
                     className={style.searchInput}
                     placeholder="Search..."
                     onChange={searchHandler}
-                    onClick={(e) => e.stopPropagation()}
                 />
             )}
         </div>

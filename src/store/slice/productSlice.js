@@ -28,15 +28,18 @@ export const productSlice = createSlice({
         },
 
         priceFilter(state, { payload }) {
-            state.list = state.list.map(elem => ({
-                ...elem,
-                show: {
-                    ...elem.show,
-                    price: elem.discont_price >= payload.min && elem.discont_price <= payload.max
-                }
-            }));
+            state.list = state.list.map(elem => {
+                const discountedPrice = elem.discont_price ? elem.discont_price : elem.price;
+                return {
+                    ...elem,
+                    show: {
+                        ...elem.show,
+                        price: discountedPrice >= payload.min && discountedPrice <= payload.max,
+                    },
+                };
+            });
         },
-
+        
         sortFilter(state, { payload }) {
             console.log(payload);
             if (payload === 1) {

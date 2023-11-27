@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     dispatch(fetchProduct());
     dispatch(fetchCategories());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>

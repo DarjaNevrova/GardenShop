@@ -16,7 +16,7 @@ export default function ProductsByCategoriesPage() {
     return (
         <Container>
             <h1 className={style.paragraph}>Tools and equipment</h1>
-            <ProductsFilters showDiscountCheckbox={true}/>
+            <ProductsFilters showDiscountCheckbox={true} />
             <div className={style.container}>
                 {
                     result

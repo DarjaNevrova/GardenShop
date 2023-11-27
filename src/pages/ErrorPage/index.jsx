@@ -7,7 +7,7 @@ export default function ErrorPage() {
     return (
         <Container>
             <div className={style.errorImg}>
-                <img src={errorImg} />
+                <img src={errorImg} alt={errorImg} />
             </div>
         </Container>
     )

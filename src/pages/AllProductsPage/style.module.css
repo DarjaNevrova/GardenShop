@@ -11,6 +11,14 @@
     font-family: Arial;
 }
 
+.notFound {
+    text-align: center;
+}
+
+.notFound h1 {
+    color: #339933;
+}
+
 @media (max-width: 375px) {
     .paragraph {
         display: flex;

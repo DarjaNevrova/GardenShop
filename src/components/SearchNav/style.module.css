@@ -4,12 +4,14 @@
     font-size: 27px;
     color: #339933;
     gap: 20px;
+    cursor: pointer;
 }
 
 .searchInput {
     width: 100px;
-    height: 27px;
+    height: 30px;
     font-size: 16px;
     border-color: #339933;
     border-radius: 20px;
+    padding: 5px 20px;
 }

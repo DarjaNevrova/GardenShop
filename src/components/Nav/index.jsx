@@ -19,12 +19,16 @@ export default function Nav() {
         setIsModalVisible(isVisible);
     };
 
+    const linkClick = () => {
+        setActive(false);
+    };
+
     return (
         <Container>
             <div className={style.mainContainer}>
                 <div className={style.imgContainer}>
                     <Link to={'/'} className={style.imgContainer}>
-                        <img className={style.img} src={headImg} />
+                        <img className={style.img} src={headImg} alt={headImg}/>
                     </Link>
                 </div>
                 <div className={style.catalogSearchContainer}>
@@ -34,9 +38,9 @@ export default function Nav() {
                     <SearchNav />
                 </div>
                 <nav className={[style.linksContainer, active ? style.active : ''].join(' ')}>
-                    <Link className={style.links} to={'/'}>Main Page</Link>
-                    <Link className={style.links} to={'/all'}>All products</Link>
-                    <Link className={style.links} to={'/sales'}>Sales</Link>
+                    <Link className={style.links} to={'/'} onClick={linkClick}>Main Page</Link>
+                    <Link className={style.links} to={'/all'} onClick={linkClick}>All products</Link>
+                    <Link className={style.links} to={'/sales'} onClick={linkClick}>Sales</Link>
                 </nav>
 
                 <div className={style.cartContainer}>

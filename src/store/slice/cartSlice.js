@@ -29,8 +29,11 @@ export const cartSlice = createSlice({
     },
 
     incr(state, { payload }) {
-      state.list.find(({ id }) => id === payload).count++
-      write(state);
+      const target = state.list.find(({ id }) => id === payload);
+      if (target) {
+        target.count++;
+        write(state);
+      }
     },
 
     decr(state, { payload }) {

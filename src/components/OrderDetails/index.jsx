@@ -16,6 +16,7 @@ export default function OrderDetails() {
   function clearCart() {
     dispatch(clear());
   }
+
   const notify = () =>
     toast.success("Thank you for your order!", {
       position: "top-right",
